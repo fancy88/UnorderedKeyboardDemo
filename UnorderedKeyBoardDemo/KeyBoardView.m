@@ -17,7 +17,7 @@
 
 @interface KeyBoardView () <UITextFieldDelegate>
 
-@property (nonatomic, strong)NSMutableArray *numberArray;
+@property (nonatomic, strong)NSArray *numberArray;
 @property (nonatomic, strong)NSMutableArray *numberButtonArray;
 @property (nonatomic, weak)  UITextField    *keyboardTextField;
 @property (nonatomic, weak)  UIButton       *deleteButton;
@@ -48,7 +48,7 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        self.numberArray = [@[@"1", @"2", @"3", @"4", @"5", @"6", @"7", @"8", @"9", @"0"] mutableCopy];
+        self.numberArray = @[@"1", @"2", @"3", @"4", @"5", @"6", @"7", @"8", @"9", @"0"];
         [self setUpMyKeyBoard];
     }
     return self;
@@ -245,7 +245,6 @@
     CAShapeLayer *layer = [CAShapeLayer layer];
     layer.bounds = sender.bounds;
     layer.position = CGPointMake(sender.frame.size.width/2, sender.frame.size.height/2);
-   // layer.strokeColor = [UIColor colorWithRed:240/255.0 green:246/255.0 blue:243/255.0 alpha:1].CGColor;
     layer.strokeColor = [UIColor colorWithRed:239/255.0 green:239/255.0 blue:241/255.0 alpha:1].CGColor;
     layer.fillColor = [UIColor clearColor].CGColor;
     layer.path = bottomPath.CGPath;
