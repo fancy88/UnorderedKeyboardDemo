@@ -4,7 +4,7 @@
 //
 //  Created by apple on 16/4/28.
 //  Copyright © 2016年 apple. All rights reserved.
-//随机数字键盘
+//  随机数字键盘
 
 #import "KeyBoardView.h"
 #import "AppDelegate.h"
@@ -60,7 +60,7 @@
 - (void)showInViewController:(UIViewController *)controller{
     //遮盖
     modelView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHight)];
-    modelView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.4f];
+    modelView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.3f];
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideKeyboard)];
     [modelView addGestureRecognizer:tap];
     [modelView addSubview:self];
@@ -96,7 +96,6 @@
     textField.textAlignment = NSTextAlignmentCenter;
     textField.secureTextEntry = YES;
     textField.backgroundColor = [UIColor whiteColor];
-//    textField.userInteractionEnabled = NO;
     [self addSubview:textField];
     self.keyboardTextField = textField;
     
