@@ -217,7 +217,7 @@
  *  @brief 点击删除按钮
  */
 - (void)deleteButtonClick{
-    //删掉最后一个字符
+    // 删掉最后一个字符
     if ([self.keyboardTextField.text length] != 0) {
         self.keyboardTextField.text = [self.keyboardTextField.text substringToIndex:([self.keyboardTextField.text length] - 1)];
     }
