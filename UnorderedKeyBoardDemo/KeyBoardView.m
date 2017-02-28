@@ -203,12 +203,10 @@
                     [self.delegate passValueWithText:self.keyboardTextField.text];
                     [self hideKeyboard];
                 }
-            }else{
-               // 提示输入密码
-               // AppDelegate *defaultDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-               // [defaultDelegate alertWithDefaultColorMSG:@"请输入密码"];
             }
-        }else{
+        }
+        else
+        {
         //点击关闭按钮
         [self hideKeyboard];
         }
