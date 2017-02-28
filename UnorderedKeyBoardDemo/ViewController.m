@@ -26,13 +26,14 @@
 }
 
 - (void)getUI{
+    
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     button.frame = CGRectMake(kScreenWidth / 2.0 - 60, 200, 120, 40);
-    // button.backgroundColor = [UIColor cyanColor];
     [button setTitle:@"点击弹出键盘" forState:UIControlStateNormal];
     [button setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
     [button addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];
+    
 }
 
 - (void)buttonAction: (UIButton *)button{
